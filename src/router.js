@@ -10,13 +10,13 @@ export default new Router({
     { path: '', component: Home,name:'0home' },
     {
       path: '/home', component: Home, name: 'home'},
-    // {
-    //   path: '/list', component: List, name: "list",
-    //   beforeEnter(to,from ,next) {
-    //     console.log("beforeEneter");
-    //     next();
-    //   }
-    // },
+    {
+      path: '/list', component: List, name: "list",
+      beforeEnter(to,from ,next) {
+        console.log("beforeEneter");
+        next();
+      }
+    },
     { path: '/Add', component: Add,name:'add'},
     { path: '/collection', component: Collection, name: 'collection', meta: {name:'collection,keepAlive:true'} },
     { path: '*', redirect: '/list',name:'*' },
