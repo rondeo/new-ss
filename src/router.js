@@ -19,7 +19,8 @@ export default new Router({
     },
     { path: '/Add', component: Add,name:'add'},
     { path: '/collection', component: Collection, name: 'collection', meta: {name:'collection,keepAlive:true'} },
-    { path: '*', redirect: '/list',name:'*' },
+    { path: '*', redirect: '/list', name: '*' },
+    {},
     
   ]
 })
